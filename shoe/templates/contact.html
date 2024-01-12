@@ -1,0 +1,185 @@
+{% extends 'basic.html' %}
+{% block title %}Footwear - Contact Us{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container">
+	{% include 'suc_message.html' %}</div>
+
+<div id="page">
+
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="bread"><span><a href="/">Home</a></span> / <span>Contact</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="colorlib-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3>Contact Information</h3>
+					<div class="row contact-info-wrap">
+						<div class="col-md-3">
+							<p><span><i class="icon-location"></i></span> Navrangpura <br>Ahmedabad </p>
+						</div>
+						<div class="col-md-3">
+							<p><span><i class="icon-phone3"></i></span> <a href="">+91 7567935004</a></p>
+						</div>
+						<div class="col-md-3">
+							<p><span><i class="icon-paperplane"></i></span> <a href="">info@infolabz.com</a></p>
+						</div>
+						<div class="col-md-3">
+							<p><span><i class="icon-globe"></i></span> <a href="#">infolabz.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="contact-wrap">
+						<h3>Get In Touch</h3>
+						<form action="/contactdetails" method="post" enctype="multipart/form-data" class="contact-form">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="name">Name</label>
+										<input type="text" id="name" name="name" class="form-control"
+											placeholder="Your Name">
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input type="text" id="email" name="email" class="form-control"
+											placeholder="Your email address">
+									</div>
+								</div>
+								<div class="w-100"></div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="phone">Phone no.</label>
+										<input type="tel" id="phone" name="phone" class="form-control"
+											placeholder="Your phone no.">
+									</div>
+								</div>
+								<div class="w-100"></div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" cols="30" rows="10" class="form-control"
+											placeholder="Say something about us"></textarea>
+									</div>
+								</div>
+								<div class="w-100"></div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<input type="submit" value="Send Message" class="btn btn-primary">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div id="map" class="colorlib-map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="colorlib-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col footer-col colorlib-widget">
+					<h4>About Footwear</h4>
+					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+						unorthographic life</p>
+					<p>
+					<ul class="colorlib-social-icons">
+						<li><a href="/"><i class="icon-twitter"></i></a></li>
+						<li><a href="/"><i class="icon-facebook"></i></a></li>
+						<li><a href="/"><i class="icon-linkedin"></i></a></li>
+						<li><a href="/"><i class="icon-dribbble"></i></a></li>
+					</ul>
+					</p>
+				</div>
+				<div class="col footer-col colorlib-widget">
+					<h4>Customer Care</h4>
+					<p>
+					<ul class="colorlib-footer-links">
+						<li><a href="/contact">Contact</a></li>
+						<li><a href="/">Returns/Exchange</a></li>
+						<li><a href="/">Gift Voucher</a></li>
+						<li><a href="/">Wishlist</a></li>
+						<li><a href="/">Special</a></li>
+						<li><a href="/">Customer Services</a></li>
+						<li><a href="/">Site maps</a></li>
+					</ul>
+					</p>
+				</div>
+				<div class="col footer-col colorlib-widget">
+					<h4>Information</h4>
+					<p>
+					<ul class="colorlib-footer-links">
+						<li><a href="/about">About us</a></li>
+						<li><a href="/">Delivery Information</a></li>
+						<li><a href="/">Privacy Policy</a></li>
+						<li><a href="/">Support</a></li>
+						<li><a href="/yourorders">Order Tracking</a></li>
+					</ul>
+					</p>
+				</div>
+
+				<div class="col footer-col">
+					<h4>News</h4>
+					<ul class="colorlib-footer-links">
+						<li><a href=" {% static 'blog.html' %} ">Blog</a></li>
+						<li><a href="/">Press</a></li>
+						<li><a href="/">Exhibitions</a></li>
+					</ul>
+				</div>
+
+				<div class="col footer-col">
+					<h4>Contact Information</h4>
+					<ul class="colorlib-footer-links">
+						<li>Navrangpura <br> Ahmedabad</li>
+						<li><a href="">+91 7567935004</a></li>
+						<li><a href="">info@infolabz.com</a></li>
+						<li><a href=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copy">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>
+						<span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script> All rights reserved
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</span>
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
+</div>
+{% endblock %}
+</body>
+
+</html>

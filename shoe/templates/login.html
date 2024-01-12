@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+{% block title %}Footwear - Login{% endblock %}
+{% block body %}
+{% load static %}
+
+{% if messages %}
+{% for msg in messages %}
+<div class="w-100"></div>
+<div class="container">
+{% include 'messages.html' %}</div>
+{% endfor %}
+{% endif %}
+
+<div class="row">
+
+        <div class="col-md-3"></div>
+					<div class="col-md-6">
+						<div class="contact-wrap">
+							<h3>Login</h3>
+							<form action="/checkuser" method="post" enctype="multipart/form-data" class="contact-form">
+								{% csrf_token %}
+
+									<div class="w-100"></div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" name = "email" id="email" class="form-control" placeholder="Your email address">
+										</div>
+									</div>
+									<div class="w-100"></div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label for="pw">Password</label>
+											<input type="password" name="password" id="pw" class="form-control" placeholder="Enter your Password">
+										</div>
+									</div>
+
+									<div class="w-100"></div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<input type="submit" value="Login In" class="btn btn-primary">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div id="map" class="colorlib-map"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+</html>
